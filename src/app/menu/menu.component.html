@@ -1,0 +1,45 @@
+<div class="text-center topic py-4">
+    <h1>Our specialitets</h1>
+</div>
+
+<div class="container">
+    <div class="row d-flex justify-content-center border-1">
+        <hr />
+
+        <div class="card-deck mx-auto col-lg-4 my-3" *ngFor="let item of foods; index as i" style="width: 18rem">
+            <div class="card">
+                <img src="{{ item.image }}" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text" *ngIf="item.description">
+                        {{ item.description }}
+                    </p>
+                </div>
+
+                <hr />
+
+                <div class="ms-3">€ {{ item.price }}</div>
+
+                <hr />
+
+                <ng-template [ngIf]="item.availability" [ngIfElse]="available">
+                    <div class="d-flex justify-content-left">
+                        <a class="btn btn-details btn-primary ms-3 mb-3" routerLink="foods/{{ i }}">Details</a
+            >
+            <a
+              class="btn btn-details btn-success ms-3 mb-3"
+              routerLink="foods/{{ i }}"
+            >
+              Order</a
+            >
+          </div>
+        </ng-template>
+        <ng-template #available>
+          <div class="text-danger ps-2 pb-3">
+            This product is not available.
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

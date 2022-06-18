@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kalam:wght@700&display=swap");
+.topic {
+    font-size: 2.5rem;
+    color: black;
+    /* margin-left: 25%; */
+    font-family: "Great Vibes";
+}
+
+.text_about_box {
+    border: none;
+}
+
+.why {
+    max-width: 100%;
+}
+
+.about_image {
+    width: 80%;
+}

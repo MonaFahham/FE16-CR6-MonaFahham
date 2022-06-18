@@ -1,0 +1,68 @@
+<h1 class="d-flex justify-content-center col-12 my-5 fw-bold topic">
+    Your Order
+</h1>
+
+<div *ngFor="let food of Products">
+    <!-- <p>{{ food.name }}</p>
+    <p>{{ food.price }}</p>
+    <hr /> -->
+
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <div class="card">
+                    <h5 class="card-header">Order</h5>
+                    <div class="card-body d-flex">
+                        <div>
+                            <img src="..." class="img-fluid mx-auto d-none d-sm-block" alt="restaurant" />
+                        </div>
+                        <div>
+                            <p class="text-left fw-bold">{{ food.name }}</p>
+                            <p>{{ food.description }}</p>
+                        </div>
+                        <div>
+                            <p>Price: €{{ food.price }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 mb-4 mb-md-0">
+                <div class="card">
+                    <h5 class="card-header">Summary</h5>
+                    <div class="d-flex">
+                        <div class="card-body">
+                            <p>Products</p>
+                            <p>Service</p>
+                            <p>Discount</p>
+                        </div>
+                        <div class="card-body">
+                            <p>€ price</p>
+                            <p>€ price</p>
+                            <p>0</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="d-flex">
+                        <div class="card-body">
+                            <p>Total amount</p>
+                            <p>(including VAT)</p>
+                        </div>
+                        <div class="card-body">
+                            <p>€ price</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- <form class="d-flex justify-content-center align-items-center" [formGroup]="customerInfo" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="Name" formControlName="name" />
+        <input type="text" placeholder="Address" formControlName="address" />
+
+        <button class="btn btn-primary text-center" type="submit">Order</button>
+    </form> -->
+</div>

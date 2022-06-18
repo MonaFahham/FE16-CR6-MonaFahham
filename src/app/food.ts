@@ -1,0 +1,51 @@
+export const foods = [
+  {
+    image: '/assets/img/1-pizza-inferno.jpg',
+    name: 'Pizza Inferno',
+    description: 'mit Salami, Sardellen, Knoblauch und viel Schärfe',
+    price: 14.9,
+    availability: true,
+  },
+  {
+    image: '/assets/img/2-pizza.jpg',
+    name: 'Pizza Salami',
+    description: 'it is a great pizza',
+    price: 15.6,
+    availability: false,
+  },
+  {
+    image: '/assets/img/3-Lazanja.jpg',
+    name: 'Lasagna',
+    description: 'You will love this Lasagna',
+    price: 13.5,
+    availability: true,
+  },
+  {
+    image: '/assets/img/4-salmon.jpg',
+    name: 'Salmon Fish',
+    description: 'The taste of this fish is amazing',
+    price: 16.8,
+    availability: false,
+  },
+  {
+    image: '/assets/img/5-sushi.jpg',
+    name: 'Sushi',
+    description: 'This is the best sushi in the world',
+    price: 18.5,
+    availability: true,
+  },
+  {
+    image: '/assets/img/6-abstract.jpg',
+    name: 'Hamburger',
+    description: 'it is a pefect hamburger',
+    price: 14.7,
+    availability: false,
+  },
+  {
+    image: '/assets/img/7-pasta.jpg',
+    name: 'Pasta',
+    description: 'it is a tasty pasta',
+    price: 16.2,
+    availability: true,
+  },
+];

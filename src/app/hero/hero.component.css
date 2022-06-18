@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kalam:wght@700&display=swap");
+
+/* .parallax {
+    background-image: url("/assets/img/hero.jpg");
+    min-height: 80vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.hero_image {
+    text-align: center;
+    color: black;
+}
+
+.fit-image {
+    width: 100%;
+}
+
+.centered {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    font-family: "Great Vibes", cursive;
+}
+
+.centered1 {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: white;
+}
+
+.centered_btn_menu {
+    top: 45%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    width: 7rem;
+}
+
+.centered_btn_book {
+    top: 45%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    width: 7rem;
+    color: white;
+    width: 8rem;
+}
+
+.btn_menu {
+    margin-top: 15%;
+    font-size: 1rem;
+}
+
+.btn_book {
+    margin-top: 15%;
+    font-size: 1rem;
+}
