@@ -2,8 +2,8 @@
 
 <div *ngIf="foods">
     <h3>{{ foods.name }}</h3>
-    <h4>{{ foods.price }}</h4>
-    <p ngIf="food.description">{{ foods.description }}</p>
+    <h4>{{ foods.price | currency }}</h4>
+    <!-- <p ngIf="foods.description">{{ foods.description }}</p> -->
 
     <button class="btn btn-success" (click)="addToCart()">Add To Cart</button>
 </div>

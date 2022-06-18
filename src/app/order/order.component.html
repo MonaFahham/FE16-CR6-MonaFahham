@@ -1,8 +1,4 @@
-<h1 class="d-flex justify-content-center col-12 my-5 fw-bold topic">
-    Your Order
-</h1>
-
-<div *ngFor="let food of Products">
+<div *ngFor="let item of card">
     <!-- <p>{{ food.name }}</p>
     <p>{{ food.price }}</p>
     <hr /> -->
@@ -14,14 +10,14 @@
                     <h5 class="card-header">Order</h5>
                     <div class="card-body d-flex">
                         <div>
-                            <img src="..." class="img-fluid mx-auto d-none d-sm-block" alt="restaurant" />
+                            <img src="{{ item.image }}" class="img-fluid mx-auto" alt="restaurant" />
                         </div>
                         <div>
-                            <p class="text-left fw-bold">{{ food.name }}</p>
-                            <p>{{ food.description }}</p>
+                            <p class="text-left fw-bold">{{ item.name }}</p>
+                            <p>{{ item.description }}</p>
                         </div>
                         <div>
-                            <p>Price: €{{ food.price }}</p>
+                            <p>Price: €{{ item.price }}</p>
                         </div>
                     </div>
                 </div>
@@ -59,10 +55,22 @@
 </div>
 
 <div class="container">
-    <!-- <form class="d-flex justify-content-center align-items-center" [formGroup]="customerInfo" (ngSubmit)="onSubmit()">
-        <input type="text" placeholder="Name" formControlName="name" />
-        <input type="text" placeholder="Address" formControlName="address" />
+    <h1 class="d-flex col-12 my-5 fw-bold form_topic">Order Form</h1>
+    <p>Please fill up the info for the delivery</p>
+    <hr />
+    <form [formGroup]="customer" (ngSubmit)="onSubmit()">
+        <div>
+            <label class="form-label">Name</label>
 
-        <button class="btn btn-primary text-center" type="submit">Order</button>
-    </form> -->
+            <input class="form-control" type="text " placeholder="Name " formControlName="name" />
+        </div>
+        <div>
+            <label class="form-label">Address</label>
+
+            <input class="form-control" type="text " placeholder="Address " formControlName="Address " />
+        </div>
+        <button class="btn btn-primary text-center my-2" type="submit ">
+      Purchase
+    </button>
+    </form>
 </div>

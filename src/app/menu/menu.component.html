@@ -24,11 +24,11 @@
 
                 <ng-template [ngIf]="item.availability" [ngIfElse]="available">
                     <div class="d-flex justify-content-left">
-                        <a class="btn btn-details btn-primary ms-3 mb-3" routerLink="foods/{{ i }}">Details</a
+                        <a class="btn btn-primary ms-3 mb-3" routerLink="/foods/{{ i }}">Details</a
             >
             <a
+              (click)="addToCart(item)"
               class="btn btn-details btn-success ms-3 mb-3"
-              routerLink="foods/{{ i }}"
             >
               Order</a
             >
