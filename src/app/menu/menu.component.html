@@ -1,4 +1,4 @@
-<div class="text-center topic py-4">
+<!-- <div class="text-center topic py-4">
     <h1>Our specialitets</h1>
 </div>
 
@@ -42,4 +42,38 @@
       </div>
     </div>
   </div>
+</div> -->
+
+<div class="text-center">
+    <h1>Our specialitets</h1>
+</div>
+
+<div class="container">
+    <div class="row d-flex">
+        <hr />
+        <div class="col-lg-4 col-md-6 col-sm-12 my-2" *ngFor="let item of foods; index as i">
+            <div class="card mx-auto" style="width: 18rem">
+                <img src="{{ item.image }}" class="card-img-top" style="height: 15rem; object-fit: cover" alt="..." />
+                <div class="card-body">
+                    <h3>{{ item.name }}</h3>
+                    <p *ngIf="item.description">{{ item.description }}</p>
+                    <hr />
+                    <p>€{{ item.price }}</p>
+                    <hr />
+                    <ng-template [ngIf]="item.availability" [ngIfElse]="avl">
+                        <div class="d-flex justify-content-left">
+                            <a class="btn btn-details btn-primary me-4" routerLink="/foods/{{ i }}">Details</a
+              >
+              <a (click)="addToCart(item)" class="btn btn-success">Order</a>
+                        </div>
+                    </ng-template>
+                    <ng-template #avl>
+                        <div class="text-danger">
+                            This product is currently not available!
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

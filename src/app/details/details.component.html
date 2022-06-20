@@ -1,9 +1,33 @@
-<h2>Food Details</h2>
+<!-- <h2>Food Details</h2>
 
+<h3>{{ foods.name }}</h3>
 <div *ngIf="foods">
     <h3>{{ foods.name }}</h3>
     <h4>{{ foods.price | currency }}</h4>
-    <!-- <p ngIf="foods.description">{{ foods.description }}</p> -->
+    <!-- <p ngIf="foods.description">{{ foods.description }}</p> 
 
     <button class="btn btn-success" (click)="addToCart()">Add To Cart</button>
+</div> -->
+
+<div class="slide">
+    <img class="show" src="{{ foods.image }}" />
+</div>
+<div *ngIf="foods">
+    <div class="text-center my-5">
+        <h3>{{ foods.name }}</h3>
+    </div>
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <p>{{ foods.description }}</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <p>{{ foods.availability ? "It is on offer" : "It is out" }}</p>
+                <p>€{{ foods.price }}</p>
+            </div>
+        </div>
+        <button class="btn btn-success my-5" (click)="addToCart()">
+      Add to Cart
+    </button>
+    </div>
 </div>
